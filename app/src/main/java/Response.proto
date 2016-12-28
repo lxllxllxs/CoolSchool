@@ -1,0 +1,11 @@
+	option java_package = "com.yiyekeji.coolschool.bean" ;
+	option java_outer_classname = "ResponseFactory" ;
+
+    message Response {
+        optional string status = 1 ;
+        optional string  resultmsg= 2 ;
+    
+    }
+
+
+

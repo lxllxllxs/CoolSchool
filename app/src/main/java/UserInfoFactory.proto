@@ -1,0 +1,10 @@
+	option java_package = "com.yiyekeji.coolschool.bean" ;
+	option java_outer_classname = "UserInfoFactory" ;
+
+    message UserInfo {
+        optional string username = 1 ;
+        optional string password = 2 ;
+        optional string userId = 3 ;
+    }
+
+
