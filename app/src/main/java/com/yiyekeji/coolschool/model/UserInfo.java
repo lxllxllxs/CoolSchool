@@ -1,73 +1,63 @@
 package com.yiyekeji.coolschool.model;
 
-
-/**
- * 注意：属性不分大小写
- * Created by lxl on 2016/11/2.
- */
 public class UserInfo {
-    private  String userName;
-    private String userId;
-    private  String  imgUrl;
+    private Integer id;
+
+    private String username;
+
     private String pwd;
-    private  int id;
 
-    public String getImgUrl() {
-        return imgUrl;
-    }
+    private Integer usertype;
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
-    }
+    private String phonenum;
 
-    public int getId() {
+    private String address;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getPwd() {
+    public String getUsername() {
+        return username;
+    }
 
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
+
+    public String getPwd() {
         return pwd;
     }
 
-    @Override
-    public String toString() {
-        return "UserInfo{" +
-                "userName='" + userName + '\'' +
-                ", userId='" + userId + '\'' +
-                ", imgUrl='" + imgUrl + '\'' +
-                ", pwd='" + pwd + '\'' +
-                ", id=" + id +
-                '}';
-    }
-
-
     public void setPwd(String pwd) {
-        this.pwd = pwd;
+        this.pwd = pwd == null ? null : pwd.trim();
     }
 
-
-
-    public String getUserName() {
-        return userName;
+    public Integer getUsertype() {
+        return usertype;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsertype(Integer usertype) {
+        this.usertype = usertype;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getPhonenum() {
+        return phonenum;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setPhonenum(String phonenum) {
+        this.phonenum = phonenum == null ? null : phonenum.trim();
     }
 
-    public UserInfo() {
+    public String getAddress() {
+        return address;
     }
 
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
+    }
 }

@@ -19,7 +19,7 @@
   
     <!-- 数据库连接  公司电脑的为空-->
     <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-        connectionURL="jdbc:mysql://127.0.0.1:3306/coolschool?characterEncoding=utf8"
+        connectionURL="jdbc:mysql://localhost:3306/coolschool?characterEncoding=utf8"
         userId="root"
         password="">
     </jdbcConnection>
@@ -29,18 +29,18 @@
     </javaTypeResolver>
     
     <!-- 数据表对应的model 层  -->
-    <javaModelGenerator targetPackage="com.yiyekeji.coolschool.model" targetProject="src">
+    <javaModelGenerator targetPackage="com.yiyekeji.coolschool.model" targetProject="java">
       <property name="enableSubPackages" value="true" />
       <property name="trimStrings" value="true" />
     </javaModelGenerator>
     
     <!-- sql mapper 隐射配置文件 -->
-    <sqlMapGenerator targetPackage="com.yiyekeji.coolschool.mapper"  targetProject="src">
+    <sqlMapGenerator targetPackage="com.yiyekeji.coolschool.mapper"  targetProject="java">
       <property name="enableSubPackages" value="true" />
     </sqlMapGenerator>
     
     <!-- 在ibatis2 中是dao层，但在mybatis3中，其实就是mapper接口 -->
-    <javaClientGenerator type="XMLMAPPER" targetPackage="com.yiyekeji.coolschool.inter"  targetProject="src">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.yiyekeji.coolschool.inter"  targetProject="java">
       <property name="enableSubPackages" value="true" />
     </javaClientGenerator>
     

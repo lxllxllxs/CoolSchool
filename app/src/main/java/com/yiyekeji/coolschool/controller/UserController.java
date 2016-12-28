@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -48,15 +47,22 @@ public class UserController {
 		builder.build().writeTo(response.getOutputStream());
 	}
 
+	@RequestMapping("testDatabase")
+	public void  testDatabase(HttpServletRequest request,HttpServletResponse response) throws IOException {
+		if (userMapper.verifyUserLogin("lxl1", "123") != null) {
+			System.out.println("登录成功！");
+		} else {
+		}
+	}
+
+
 	@RequestMapping("add1000")
 	public void addUserInfo() {
 		System.out.println("添加1000个用户！");
 		for (int i=1;i<10;i++){
 			UserInfo userInfo = new UserInfo();
-			userInfo.setUserId(UUID.randomUUID().toString());
-			userInfo.setUserName("lxl"+i);
+			userInfo.setUsername("lxl"+i);
 			userInfo.setPwd("123");
-			userInfo.setImgUrl("1.jpg");
 			userMapper.addUser(userInfo);
 		}
 		System.out.println("添加完成！");
